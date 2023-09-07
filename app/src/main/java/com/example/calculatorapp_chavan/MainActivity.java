@@ -19,4 +19,8 @@ public class MainActivity extends AppCompatActivity {
         EditText firstNum = findViewById(R.id.firstInput);
         firstNum.getText().clear();
     }
+    public void clear2ndInput(View v) {
+        EditText firstNum = findViewById(R.id.secondInput);
+        firstNum.getText().clear();
+    }
 }

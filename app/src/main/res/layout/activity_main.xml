@@ -50,7 +50,7 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="clear1stInput"
+        android:onClick="clear2ndInput"
         android:scaleX="1"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
