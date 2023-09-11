@@ -11,13 +11,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    //Used ChatGPT to use Handler.
     private final Handler handler = new Handler();
     private final Runnable runnable = new Runnable() {
         @Override
         public void run() {
             updateOutput();
 
-            // Post the Runnable again with a delay of 2000 milliseconds
+            // Post the Runnable again with a delay of 1000 milliseconds
             handler.postDelayed(this, 1000);
         }
     };
@@ -35,16 +36,29 @@ public class MainActivity extends AppCompatActivity {
         EditText secondNum = findViewById(R.id.secondInput);
         secondNum.getText().clear();
     }
+
     private void updateOutput(){
         EditText firstNum = findViewById(R.id.firstInput);
+        EditText secondNum = findViewById(R.id.secondInput);
         TextView outputText = findViewById(R.id.outputText);
+
+        Double num1 = Double.parseDouble(firstNum.getText().toString());
+        Double num2 = Double.parseDouble(secondNum.getText().toString());
+
         Log.d("settingoutput", firstNum.getText().toString());
-        outputText.setText(firstNum.getText().toString());
+
+        Double outputNum = num1 + num2;
+        String outputNumString = "" + outputNum;
+        outputText.setText("" + num1);
     }
-    public void changeTheme(){
+
+    //public void changeTheme(){
         //code to change from light to dark and dark to light
-    }
+    //}
+
+
     @Override
+    //Used ChatGPT. Destroys the handler after I shut the app down
     protected void onDestroy() {
         super.onDestroy();
 
