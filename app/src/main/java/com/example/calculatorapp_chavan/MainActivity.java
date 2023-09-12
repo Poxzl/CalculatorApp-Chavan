@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     //Used ChatGPT to use Handler.
-    private final Handler handler = new Handler();
+    /*private final Handler handler = new Handler();
     private final Runnable runnable = new Runnable() {
         @Override
         public void run() {
@@ -21,12 +21,12 @@ public class MainActivity extends AppCompatActivity {
             // Post the Runnable again with a delay of 1000 milliseconds
             handler.postDelayed(this, 1000);
         }
-    };
+    };*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        handler.postDelayed(runnable, 1000);
+        //handler.postDelayed(runnable, 1000);
     }
     public void clear1stInput(View v) {
         EditText firstNum = findViewById(R.id.firstInput);
@@ -42,14 +42,14 @@ public class MainActivity extends AppCompatActivity {
         EditText secondNum = findViewById(R.id.secondInput);
         TextView outputText = findViewById(R.id.outputText);
 
-        Double num1 = Double.parseDouble(firstNum.getText().toString());
+       /* Double num1 = Double.parseDouble(firstNum.getText().toString());
         Double num2 = Double.parseDouble(secondNum.getText().toString());
 
         Log.d("settingoutput", firstNum.getText().toString());
 
         Double outputNum = num1 + num2;
         String outputNumString = "" + outputNum;
-        outputText.setText("" + num1);
+        outputText.setText("" + num1);*/
     }
 
     //public void changeTheme(){
@@ -57,12 +57,12 @@ public class MainActivity extends AppCompatActivity {
     //}
 
 
-    @Override
+    //@Override
     //Used ChatGPT. Destroys the handler after I shut the app down
-    protected void onDestroy() {
+   /*protected void onDestroy() {
         super.onDestroy();
 
         // Stop calling the function every second
         handler.removeCallbacks(runnable);
-    }
+    }*/
 }
