@@ -12,17 +12,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     //Used ChatGPT to use Handler.
-    /*private final Handler handler = new Handler();
-    private final Runnable runnable = new Runnable() {
-        @Override
-        public void run() {
-            updateOutput();
 
-            // Post the Runnable again with a delay of 1000 milliseconds
-            handler.postDelayed(this, 1000);
-        }
-    };*/
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -37,19 +27,19 @@ public class MainActivity extends AppCompatActivity {
         secondNum.getText().clear();
     }
 
-    private void updateOutput(){
+    public void updateOutput(View view){
         EditText firstNum = findViewById(R.id.firstInput);
         EditText secondNum = findViewById(R.id.secondInput);
         TextView outputText = findViewById(R.id.outputText);
 
-       /* Double num1 = Double.parseDouble(firstNum.getText().toString());
-        Double num2 = Double.parseDouble(secondNum.getText().toString());
+        int num1 = Integer.parseInt(firstNum.getText().toString());
+        int num2 = Integer.parseInt(secondNum.getText().toString());
 
         Log.d("settingoutput", firstNum.getText().toString());
 
-        Double outputNum = num1 + num2;
+        int outputNum = num1 + num2;
         String outputNumString = "" + outputNum;
-        outputText.setText("" + num1);*/
+        outputText.setText("" + outputNum);
     }
 
     //public void changeTheme(){
