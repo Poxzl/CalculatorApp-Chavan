@@ -11,8 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Enter Number: "
-        android:inputType="number"
+        android:hint="@string/enterText"
+        android:width="@dimen/editTextWidth"
+        android:height="@dimen/editTextHeight"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.199"
@@ -25,8 +26,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Enter Number: "
-        android:inputType="number"
+        android:hint="@string/enterText"
+        android:width="@dimen/editTextWidth"
+        android:height="@dimen/editTextHeight"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.199"
@@ -35,12 +37,13 @@
         app:layout_constraintVertical_bias="0.438" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/clear1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="clear1stInput"
         android:scaleX="1"
-        android:text="Clear"
+        android:text="@string/clearText"
+        android:layout_margin="@dimen/clearTextMargin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.542"
@@ -49,26 +52,28 @@
         app:layout_constraintVertical_bias="0.074" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/clear2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="clear2ndInput"
         android:scaleX="1"
-        android:text="Clear"
+        android:text="@string/clearText"
+        android:layout_margin="@dimen/clearTextMargin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toEndOf="@+id/secondInput"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/clear1"
         app:layout_constraintVertical_bias="0.436" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/plusButton"
         android:layout_width="75dp"
         android:layout_height="55dp"
         android:text="+"
         android:textSize="25dp"
-        android:onClick="updateOutput"
+        android:onClick="setPlus"
+        android:paddingBottom="@dimen/symbolPadding"
         app:layout_constraintBottom_toTopOf="@+id/secondInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.047"
@@ -77,41 +82,47 @@
         app:layout_constraintVertical_bias="0.512" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/minusButton"
         android:layout_width="75dp"
         android:layout_height="55dp"
         android:text="-"
         android:textSize="25dp"
+        android:onClick="setMinus"
+        android:paddingBottom="@dimen/symbolPadding"
         app:layout_constraintBottom_toTopOf="@+id/secondInput"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
-        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toEndOf="@+id/plusButton"
         app:layout_constraintTop_toBottomOf="@+id/firstInput"
-        app:layout_constraintVertical_bias="0.512" />
+        app:layout_constraintVertical_bias="0.511" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/timesButton"
         android:layout_width="75dp"
         android:layout_height="55dp"
         android:text="x"
         android:textSize="25dp"
+        android:onClick="setTimes"
+        android:paddingBottom="@dimen/symbolPadding"
         app:layout_constraintBottom_toTopOf="@+id/secondInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.176"
-        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintStart_toEndOf="@+id/minusButton"
         app:layout_constraintTop_toBottomOf="@+id/firstInput"
         app:layout_constraintVertical_bias="0.512" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/divideButton"
         android:layout_width="75dp"
         android:layout_height="55dp"
         android:text="/"
         android:textSize="25dp"
+        android:onClick="setDivide"
+        android:paddingBottom="@dimen/symbolPadding"
         app:layout_constraintBottom_toTopOf="@+id/secondInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.652"
-        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintStart_toEndOf="@+id/timesButton"
         app:layout_constraintTop_toBottomOf="@+id/firstInput"
         app:layout_constraintVertical_bias="0.512" />
 
@@ -119,12 +130,13 @@
         android:id="@+id/outputText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="38dp"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/secondInput"
-        app:layout_constraintVertical_bias="0.195" />
+        app:layout_constraintVertical_bias="0.137" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

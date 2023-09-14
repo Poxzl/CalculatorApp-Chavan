@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CalculatorApp-Chavan</string>
+    <string name="clearText">Clear</string>
+    <string name="enterText">Enter Number: </string>
 </resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="editTextWidth">250dp</dimen>
+    <dimen name="editTextHeight">50dp</dimen>
+    <dimen name="clearTextMargin">10dp</dimen>
+    <dimen name="symbolPadding">10dp</dimen>
+
+</resources>
